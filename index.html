@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web前端</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> 优先采用-->
+    <style>
+        @import url(./css/index.css);
+    </style>
+    <!-- <style>
+        h1{
+            color: red;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>这是标题</h1>
+    <p>哔哩哔哩</p>
+    <p>哔哩哔哩</p><!--*sh+alt+↓*/!-->
+    <hr color="red" width="600" align="left">
+    <!-- ctrl + enter 换行 -->
+    <p>xxxxx<strong>xx</strong>xxxxxxx</p>
+    <!-- alt + W 用于给选定文字加标签 -->
+    <ol>
+        <li>ddd</li>
+        <li>ddd</li>
+        <li>ddd</li>
+        <!-- shift + alt + ↓ 复制当前行到下一行 -->
+    </ol>
+    <!-- width px 百分比相对于父元素 -->
+    <table border="1" width="50%" height="50px" 
+    align="center" 
+    cellspacing="0" cellpadding="0">
+    <!-- bordercolor="red" bgcolor="yellow -->
+        <tr height="50" align="center">
+            <!-- bgcolor="orange" align="center" valign="middle" -->
+            <!-- middle or top or bottom -->
+            <td width="100">会员姓名</td>
+            <td width="150"></td>
+            <td width="100">出生日期</td>
+            <td width="150"></td>
+            <!-- <td colspan="2" rowspan="2">2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr height="50" align="center">
+            <td>身份证号</td>
+            <td colspan="3"></td>
+            <!-- <td>5</td>
+            <td>6</td> -->
+        </tr>
+        <tr height="50" align="center">
+            <td>通信地址</td>
+            <td colspan="3"></td>
+        </tr>        
+        <tr height="50" align="center">
+            <td>联系电话</td>
+            <td colspan="3"></td>
+        </tr>        
+        <tr height="50" align="center">
+            <td>会员卡号</td>
+            <td colspan="3"></td>
+        </tr>
+        <!-- <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr> -->
+    </table>
+    <form action="https://www.baidu.com" method="post">
+        用户信息：<input type="text" placeholder="请输入用户名" name="username">
+        <br>
+        密码：<input type="password" placeholder="请输入密码" name="password">
+        <br>
+        <input type="submit" value="登陆">
+        <button type="submit">登录</button>
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+    </form>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue kisoku</title>
+    <style>
+        .active{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p v-html="content"></p>
+        <h2 v-text="message+'!'"></h2>
+        <h2>{{ message }}yes</h2> 
+        <input type="button" value="v-on-click" v-on:click="doIt">
+        <br>
+        <br>
+        <input type="text" v-model="message" @keyup.enter="getM">
+        <h2 @click="changeFood">{{food}}</h2>
+       
+        <button @click="sub">
+            -
+        </button>
+        <span>{{ num }}</span>
+        <button @click="add">
+            +
+        </button>
+
+        <button @click="changeIsShow">18</button>
+        <input type="button" value="18" @click="changeIsShow">
+        <img src="./img/test.jpg" v-show="isShow">
+        <p>
+            <input type="button" value="v-if testbutton" @click="toggleIsShow">
+        </p>
+        <p v-if="isShowButton">V-IF TEST</p>
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="{active:isActive}" @click="toggleActive">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:" Hello Sailensu Susuka! ",
+                info:"Kan test",
+                content:"<a href='http://www.qq.com'>tencent",
+                food:"banana",
+                num:"1",
+                isShow:false,
+                isShowButton:false,
+                imgSrc:"./img/test.jpg",
+                imgTitle:"Banana",
+                isActive:false,
+            },
+
+            methods:{
+                getM:function(){
+                    alert(this.message)
+                },
+                
+                doIt:function(){
+                    alert("vue-test");
+                },
+
+                changeFood:function(){
+                    console.log(this.food);
+                    this.food+=" NB!"
+                },
+
+                sub:function(){
+                    if(this.num>0){
+                        this.num--;
+                    }else{
+                        alert("min");
+                    }
+                },
+
+                add:function(){
+                    if(this.num<10){
+                        this.num++;
+                    }else{
+                        alert("max");
+                    }
+                },
+
+                changeIsShow:function(){
+                    this.isShow = !this.isShow;
+                },
+
+                toggleIsShow:function(){
+                    this.isShowButton = !this.isShowButton;
+                },
+
+                toggleActive:function(){
+                    this.isActive = !this.isActive;
+                },
+            }
+        })
+    </script>
+</body>
+</html>
